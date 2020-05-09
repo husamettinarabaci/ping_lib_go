@@ -231,8 +231,8 @@ func (p *Pinger) Privileged() bool {
 // Run runs the pinger. This is a blocking function that will exit when it's
 // done. If Count or Interval are not specified, it will run continuously until
 // it is interrupted.
-func (p *Pinger) Run() {
-	p.run()
+func (p *Pinger) Run() error {
+	return p.run()
 }
 
 func (p *Pinger) run() error {

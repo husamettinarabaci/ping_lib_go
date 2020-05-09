@@ -13,5 +13,5 @@ go get "github.com/AfatekDevelopers/ping_lib_go/devafatekping"
 Web Site        : www.afatek.com.tr <br />
 Developer Groups : https://t.me/Afatek/ <br />
 
-## NOTE:
+## Note:
 Inspired by [go-ping](https://github.com/sparrc/go-ping)

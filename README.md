@@ -1,4 +1,4 @@
-# convert_lib_go
+# ping_lib_go
 
 Go dili için ping kütüphanesi
 
@@ -13,5 +13,5 @@ go get "github.com/AfatekDevelopers/ping_lib_go/devafatekping"
 Web Site        : www.afatek.com.tr <br />
 Developer Groups : https://t.me/Afatek/ <br />
 
-## NOTE:
+## Not:
 Alıntı [go-ping](https://github.com/sparrc/go-ping)
