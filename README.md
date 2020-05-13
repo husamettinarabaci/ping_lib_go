@@ -4,7 +4,7 @@ Go dili için ping kütüphanesi
 
 ## Kurulum:
 
-```
+```shell
 go get "github.com/AfatekDevelopers/ping_lib_go/devafatekping"
 ```
 

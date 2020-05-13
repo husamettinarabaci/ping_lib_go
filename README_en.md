@@ -4,7 +4,7 @@ Ping library for Go
 
 ## Installation:
 
-```
+```shell
 go get "github.com/AfatekDevelopers/ping_lib_go/devafatekping"
 ```
 
