@@ -1,4 +1,4 @@
-package devafatekping
+package devhsmtekping
 
 import (
 	"bytes"
@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/AfatekDevelopers/convert_lib_go/devafatekconvert"
+	"github.com/HsmTeknoloji/convert_lib_go/devhsmtekconvert"
 	"golang.org/x/net/icmp"
 	"golang.org/x/net/ipv4"
 	"golang.org/x/net/ipv6"
@@ -440,8 +440,8 @@ func (p *Pinger) processPacket(recv *packet) error {
 				len(pkt.Data), pkt.Data)
 		}
 
-		tracker := devafatekconvert.BytesToInt(pkt.Data[timeSliceLength:])
-		timestamp := devafatekconvert.BytesToTime(pkt.Data[:timeSliceLength])
+		tracker := devhsmtekconvert.BytesToInt(pkt.Data[timeSliceLength:])
+		timestamp := devhsmtekconvert.BytesToTime(pkt.Data[:timeSliceLength])
 
 		if tracker != p.Tracker {
 			return nil
@@ -477,7 +477,7 @@ func (p *Pinger) sendICMP(conn *icmp.PacketConn) error {
 		dst = &net.UDPAddr{IP: p.ipaddr.IP, Zone: p.ipaddr.Zone}
 	}
 
-	t := append(devafatekconvert.TimeToBytes(time.Now()), devafatekconvert.IntToBytes(p.Tracker)...)
+	t := append(devhsmtekconvert.TimeToBytes(time.Now()), devhsmtekconvert.IntToBytes(p.Tracker)...)
 	if remainSize := p.Size - timeSliceLength - trackerLength; remainSize > 0 {
 		t = append(t, bytes.Repeat([]byte{1}, remainSize)...)
 	}
